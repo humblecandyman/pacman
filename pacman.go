@@ -3,10 +3,12 @@ package main
 import (
 	"github.com/hajimehoshi/ebiten/v2"
 	"github.com/humblecandyman/pacman/scenes"
+	"github.com/humblecandyman/pacman/utils"
 )
 
 type Pacman struct {
-	entity scenes.Entity
+	screenSize utils.Vector
+	entity     scenes.Entity
 }
 
 func (pacman *Pacman) Update() error {
@@ -15,9 +17,10 @@ func (pacman *Pacman) Update() error {
 }
 
 func (pacman *Pacman) Layout(_, _ int) (int, int) {
-	return 600, 600
+	return int(pacman.screenSize.X), int(pacman.screenSize.Y)
 }
 
-func (game *Pacman) Draw(screen *ebiten.Image) {
-	game.entity.Draw(screen)
+func (pacman *Pacman) Draw(screen *ebiten.Image) {
+	ebiten.SetWindowSize(pacman.Layout(0, 0))
+	pacman.entity.Draw(screen)
 }

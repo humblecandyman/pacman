@@ -4,30 +4,22 @@ import (
 	"image/color"
 
 	"github.com/hajimehoshi/ebiten/v2"
-	"github.com/humblecandyman/pacman/controllers"
+	"github.com/humblecandyman/pacman/physics"
 	"github.com/humblecandyman/pacman/render"
 	"github.com/humblecandyman/pacman/utils"
 )
 
 type Pacman struct {
-	position  utils.Vector
-	radius    float64
-	direction utils.Direction
-	speed     float64
+	Character
 
-	eyePosition    utils.Vector
-	movementVector utils.Vector
-
-	controller controllers.IController
+	radius      float64
+	eyePosition utils.Vector
 }
 
 func (pacman *Pacman) Update() {
 	pacman.controller.Update()
 	pacman.updatePosition()
-}
-
-func (pacman *Pacman) updatePosition() {
-	pacman.position = pacman.position.Add(pacman.movementVector)
+	pacman.updateEyePosition()
 }
 
 func (pacman Pacman) Draw(target *ebiten.Image) {
@@ -55,50 +47,6 @@ func (pacman Pacman) drawEye(target *ebiten.Image) {
 	}.Draw(target)
 }
 
-func (pacman *Pacman) Do(command string) {
-	switch command {
-	case "go-up":
-		pacman.setDirection(utils.DirectionUp)
-	case "go-right":
-		pacman.setDirection(utils.DirectionRight)
-	case "go-down":
-		pacman.setDirection(utils.DirectionDown)
-	case "go-left":
-		pacman.setDirection(utils.DirectionLeft)
-	}
-}
-
-func (pacman *Pacman) setDirection(newDirection utils.Direction) {
-	if pacman.direction == newDirection {
-		return
-	}
-
-	pacman.direction = newDirection
-	pacman.handleDirectionChange()
-}
-
-func (pacman *Pacman) handleDirectionChange() {
-	pacman.updateMovementVector()
-	pacman.updateEyePosition()
-}
-
-func (pacman *Pacman) updateMovementVector() {
-	movementVector := utils.Vector{}
-
-	switch pacman.direction {
-	case utils.DirectionUp:
-		movementVector.Y -= pacman.speed
-	case utils.DirectionRight:
-		movementVector.X += pacman.speed
-	case utils.DirectionDown:
-		movementVector.Y += pacman.speed
-	case utils.DirectionLeft:
-		movementVector.X -= pacman.speed
-	}
-
-	pacman.movementVector = movementVector
-}
-
 func (pacman *Pacman) updateEyePosition() {
 	eyePositionRelativeToPosition := utils.Vector{
 		X: pacman.radius * 0.25,
@@ -122,4 +70,33 @@ func (pacman *Pacman) updateEyePosition() {
 	}
 
 	pacman.eyePosition = eyePositions[pacman.direction]
+}
+
+func (pacman Pacman) CanCollisionWith(another string) bool {
+	return another != PacmanCollisionMask
+}
+
+func (pacman Pacman) GetCollisionMask() string {
+	return PacmanCollisionMask
+}
+
+func (pacman *Pacman) OnCollisionWith(another string) {
+	switch another {
+	case FoodCollisionMask:
+		pacman.increaseScore(100)
+	}
+}
+
+func (pacman Pacman) IsDead() bool {
+	return false
+}
+
+func (pacman Pacman) GetBoundingBox() physics.BoundingBox {
+	return physics.BoundingBox{
+		Position: pacman.position,
+		Size: utils.Vector{
+			X: pacman.radius,
+			Y: pacman.radius,
+		},
+	}
 }

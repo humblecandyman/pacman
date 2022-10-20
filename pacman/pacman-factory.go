@@ -14,10 +14,12 @@ type PacmanFactory struct {
 
 func (factory PacmanFactory) Create() *Pacman {
 	pacman := &Pacman{
-		position:  factory.Position,
-		radius:    factory.Radius,
-		direction: factory.InitialDirection,
-		speed:     2,
+		Character: Character{
+			position:  factory.Position,
+			direction: factory.InitialDirection,
+			speed:     2,
+		},
+		radius: factory.Radius,
 	}
 
 	controller := controllers.PlayerFactory{
@@ -29,7 +31,7 @@ func (factory PacmanFactory) Create() *Pacman {
 	}.Create()
 
 	pacman.controller = controller
-	pacman.handleDirectionChange()
+	pacman.updateMovementVector()
 
 	return pacman
 }
