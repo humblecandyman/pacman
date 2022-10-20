@@ -90,9 +90,28 @@ func (pacman *Pacman) OnCollision(collision physics.Collision) {
 		pacman.increaseScore(100)
 	case WallCollisionMask:
 		pacman.handleCollisionAgainstWall(collision.Another)
+	case TeleporterCollisionMask:
+		pacman.handleCollisionAgainstTeleporter(collision.Data.(*Teleporter))
 	}
 }
 
 func (pacman Pacman) IsDead() bool {
 	return false
+}
+
+func (pacman *Pacman) handleCollisionAgainstTeleporter(teleporter *Teleporter) {
+	terminalPosition := teleporter.GetTerminalPosition(pacman.direction)
+	pacman.position = terminalPosition
+	halfSize := pacman.size.MultiplyFactor(0.5)
+
+	switch pacman.direction {
+	case utils.DirectionUp:
+		pacman.position.Y -= halfSize.Y
+	case utils.DirectionRight:
+		pacman.position.X += halfSize.X
+	case utils.DirectionDown:
+		pacman.position.Y += halfSize.Y
+	case utils.DirectionLeft:
+		pacman.position.X -= halfSize.X
+	}
 }

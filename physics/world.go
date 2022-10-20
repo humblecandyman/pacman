@@ -30,10 +30,12 @@ func (world World) Update() {
 					leftBody.OnCollision(Collision{
 						Mask:    rightCollisionMask,
 						Another: rightBoundingBox,
+						Data:    rightBody,
 					})
 					rightBody.OnCollision(Collision{
 						Mask:    leftCollisionMask,
 						Another: rightBoundingBox,
+						Data:    leftBody,
 					})
 
 					if leftBody.IsDead() {

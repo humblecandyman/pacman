@@ -43,11 +43,30 @@ func (factory GameSceneFactory) Create() *Scene {
 	}.Create()
 	world.PushBody(food)
 
+	teleporterA, teleporterB := pacman.TeleporterFactory{
+		TerminalA: utils.Vector{
+			X: 0,
+			Y: factory.ScreenSize.Y * 0.5,
+		},
+		TerminalB: utils.Vector{
+			X: factory.ScreenSize.X,
+			Y: factory.ScreenSize.Y * 0.5,
+		},
+		Size: utils.Vector{
+			X: 20,
+			Y: 20,
+		},
+	}.Create()
+	world.PushBody(teleporterA)
+	world.PushBody(teleporterB)
+
 	return &Scene{
 		entities: []Entity{
 			wall,
 			pacmanPlayer,
 			food,
+			teleporterA,
+			teleporterB,
 			world,
 		},
 	}
