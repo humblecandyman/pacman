@@ -48,6 +48,10 @@ func (pacman Pacman) drawEye(target *ebiten.Image) {
 }
 
 func (pacman *Pacman) updateEyePosition() {
+	if pacman.direction == utils.NoDirection {
+		return
+	}
+
 	eyePositionRelativeToPosition := utils.Vector{
 		X: pacman.radius * 0.25,
 		Y: pacman.radius * 0.3,
@@ -72,7 +76,7 @@ func (pacman *Pacman) updateEyePosition() {
 	pacman.eyePosition = eyePositions[pacman.direction]
 }
 
-func (pacman Pacman) CanCollisionWith(another string) bool {
+func (pacman Pacman) CanCollideWith(another string) bool {
 	return another != PacmanCollisionMask
 }
 
@@ -80,23 +84,15 @@ func (pacman Pacman) GetCollisionMask() string {
 	return PacmanCollisionMask
 }
 
-func (pacman *Pacman) OnCollisionWith(another string) {
-	switch another {
+func (pacman *Pacman) OnCollision(collision physics.Collision) {
+	switch collision.Mask {
 	case FoodCollisionMask:
 		pacman.increaseScore(100)
+	case WallCollisionMask:
+		pacman.handleCollisionAgainstWall(collision.Another)
 	}
 }
 
 func (pacman Pacman) IsDead() bool {
 	return false
-}
-
-func (pacman Pacman) GetBoundingBox() physics.BoundingBox {
-	return physics.BoundingBox{
-		Position: pacman.position,
-		Size: utils.Vector{
-			X: pacman.radius,
-			Y: pacman.radius,
-		},
-	}
 }

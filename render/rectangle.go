@@ -12,6 +12,7 @@ type Rectangle struct {
 	Size     utils.Vector
 	Position utils.Vector
 	Color    color.Color
+	Empty    bool
 }
 
 func (rect Rectangle) Draw(target *ebiten.Image) {

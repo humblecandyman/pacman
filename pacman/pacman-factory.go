@@ -18,6 +18,10 @@ func (factory PacmanFactory) Create() *Pacman {
 			position:  factory.Position,
 			direction: factory.InitialDirection,
 			speed:     2,
+			size: utils.Vector{
+				X: factory.Radius * 2.0,
+				Y: factory.Radius * 2.0,
+			},
 		},
 		radius: factory.Radius,
 	}

@@ -18,8 +18,24 @@ func (box BoundingBox) IsCollidingWith(another BoundingBox) bool {
 	minA, maxA := box.getMinMaxCorners()
 	minB, maxB := another.getMinMaxCorners()
 
-	return minB.X <= maxA.X &&
-		maxB.X >= minA.X &&
-		minB.Y <= maxA.Y &&
-		maxB.Y >= minA.Y
+	return minB.X < maxA.X &&
+		maxB.X > minA.X &&
+		minB.Y < maxA.Y &&
+		maxB.Y > minA.Y
+}
+
+func (box BoundingBox) Top() float64 {
+	return box.Position.Y - box.Size.Y*0.5
+}
+
+func (box BoundingBox) Right() float64 {
+	return box.Position.X + box.Size.X*0.5
+}
+
+func (box BoundingBox) Bottom() float64 {
+	return box.Position.Y + box.Size.Y*0.5
+}
+
+func (box BoundingBox) Left() float64 {
+	return box.Position.X - box.Size.X*0.5
 }

@@ -3,7 +3,8 @@ package utils
 type Direction = string
 
 const (
-	DirectionUp    Direction = "up"
+	NoDirection    Direction = ""
+	DirectionUp              = "up"
 	DirectionRight           = "right"
 	DirectionLeft            = "left"
 	DirectionDown            = "down"

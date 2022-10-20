@@ -35,7 +35,7 @@ func (food Food) Draw(target *ebiten.Image) {
 	}.Draw(target)
 }
 
-func (food Food) CanCollisionWith(another string) bool {
+func (food Food) CanCollideWith(another string) bool {
 	return another == PacmanCollisionMask
 }
 
@@ -47,13 +47,16 @@ func (food Food) IsDead() bool {
 	return food.isDead
 }
 
-func (food *Food) OnCollisionWith(_ string) {
+func (food *Food) OnCollision(collision physics.Collision) {
 	food.isDead = true
 }
 
 func (food Food) GetBoundingBox() physics.BoundingBox {
 	return physics.BoundingBox{
 		Position: food.position,
-		Size:     food.size,
+		Size: utils.Vector{
+			X: 1,
+			Y: 1,
+		},
 	}
 }

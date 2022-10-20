@@ -19,16 +19,22 @@ func (world World) Update() {
 
 		for rightIndex := leftIndex + 1; rightIndex < len(world.bodies); rightIndex++ {
 			rightBody := world.bodies[rightIndex]
-			rightcollisionMask := rightBody.GetCollisionMask()
+			rightCollisionMask := rightBody.GetCollisionMask()
 
-			if leftBody.CanCollisionWith(rightcollisionMask) {
+			if leftBody.CanCollideWith(rightCollisionMask) {
 				leftBoundingBox := leftBody.GetBoundingBox()
 				rightBoundingBox := rightBody.GetBoundingBox()
 
 				if leftBoundingBox.IsCollidingWith(rightBoundingBox) {
 					leftCollisionMask := leftBody.GetCollisionMask()
-					leftBody.OnCollisionWith(rightcollisionMask)
-					rightBody.OnCollisionWith(leftCollisionMask)
+					leftBody.OnCollision(Collision{
+						Mask:    rightCollisionMask,
+						Another: rightBoundingBox,
+					})
+					rightBody.OnCollision(Collision{
+						Mask:    leftCollisionMask,
+						Another: rightBoundingBox,
+					})
 
 					if leftBody.IsDead() {
 						break
@@ -47,7 +53,7 @@ func (world World) Draw(target *ebiten.Image) {
 
 		boundingBox := body.GetBoundingBox()
 
-		render.Rectangle{
+		render.EmptyRectangle{
 			Position: boundingBox.Position,
 			Size:     boundingBox.Size,
 			Color: color.RGBA{

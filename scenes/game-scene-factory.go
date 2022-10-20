@@ -23,6 +23,18 @@ func (factory GameSceneFactory) Create() *Scene {
 	}.Create()
 	world.PushBody(pacmanPlayer)
 
+	wall := pacman.WallFactory{
+		Position: utils.Vector{
+			X: factory.ScreenSize.X * 0.5,
+			Y: factory.ScreenSize.Y * 0.3,
+		},
+		Size: utils.Vector{
+			X: factory.ScreenSize.X,
+			Y: 5,
+		},
+	}.Create()
+	world.PushBody(wall)
+
 	food := pacman.FoodFactory{
 		Position: factory.ScreenSize.Multiply(utils.Vector{
 			X: 0.8,
@@ -33,6 +45,7 @@ func (factory GameSceneFactory) Create() *Scene {
 
 	return &Scene{
 		entities: []Entity{
+			wall,
 			pacmanPlayer,
 			food,
 			world,

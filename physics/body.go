@@ -4,8 +4,8 @@ type Body interface {
 	GetBoundingBox() BoundingBox
 
 	GetCollisionMask() string
-	CanCollisionWith(string) bool
-	OnCollisionWith(string)
+	CanCollideWith(string) bool
+	OnCollision(Collision)
 
 	IsDead() bool
 }
