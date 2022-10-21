@@ -23,6 +23,10 @@ func (pacman *Pacman) Update() {
 }
 
 func (pacman Pacman) Draw(target *ebiten.Image) {
+	if pacman.isDead {
+		return
+	}
+
 	pacman.drawBody(target)
 	pacman.drawEye(target)
 }
@@ -92,11 +96,13 @@ func (pacman *Pacman) OnCollision(collision physics.Collision) {
 		pacman.handleCollisionAgainstWall(collision.Another)
 	case TeleporterCollisionMask:
 		pacman.handleCollisionAgainstTeleporter(collision.Data.(*Teleporter))
+	case PhantomCollisionMask:
+		pacman.handleCollisionAgainstPhantom(collision.Data.(*Phantom))
 	}
 }
 
 func (pacman Pacman) IsDead() bool {
-	return false
+	return pacman.isDead
 }
 
 func (pacman *Pacman) handleCollisionAgainstTeleporter(teleporter *Teleporter) {
@@ -114,4 +120,12 @@ func (pacman *Pacman) handleCollisionAgainstTeleporter(teleporter *Teleporter) {
 	case utils.DirectionLeft:
 		pacman.position.X -= halfSize.X
 	}
+}
+
+func (pacman *Pacman) handleCollisionAgainstPhantom(phantom *Phantom) {
+	if phantom.CanBeEaten() {
+		return
+	}
+
+	pacman.isDead = true
 }

@@ -60,13 +60,35 @@ func (factory GameSceneFactory) Create() *Scene {
 	world.PushBody(teleporterA)
 	world.PushBody(teleporterB)
 
+	phantom := pacman.PhantomFactory{
+		Position: factory.ScreenSize.Multiply(utils.Vector{
+			X: 0.2,
+			Y: 0.5,
+		}),
+		Size: 15,
+	}.Create()
+	world.PushBody(phantom)
+
+	superFood := pacman.SuperFoodFactory{
+		Position: factory.ScreenSize.Multiply(utils.Vector{
+			X: 0.1,
+			Y: 0.5,
+		}),
+		OnEaten: func() {
+			phantom.MakeItVulnerable()
+		},
+	}.Create()
+	world.PushBody(superFood)
+
 	return &Scene{
 		entities: []Entity{
 			wall,
 			pacmanPlayer,
 			food,
+			superFood,
 			teleporterA,
 			teleporterB,
+			phantom,
 			world,
 		},
 	}

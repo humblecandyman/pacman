@@ -5,4 +5,5 @@ const (
 	PacmanCollisionMask            = "pacman"
 	WallCollisionMask              = "wall"
 	TeleporterCollisionMask        = "teleporter"
+	PhantomCollisionMask           = "phantom"
 )

@@ -7,16 +7,16 @@ import (
 )
 
 type Character struct {
-	position  utils.Vector
-	size      utils.Vector
-	direction utils.Direction
-	speed     float64
-
+	position       utils.Vector
+	size           utils.Vector
+	direction      utils.Direction
+	speed          float64
 	movementVector utils.Vector
 
 	controller controllers.IController
 
-	score int
+	score  int
+	isDead bool
 }
 
 func (character *Character) updatePosition() {

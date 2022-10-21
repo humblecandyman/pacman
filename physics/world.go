@@ -19,6 +19,11 @@ func (world World) Update() {
 
 		for rightIndex := leftIndex + 1; rightIndex < len(world.bodies); rightIndex++ {
 			rightBody := world.bodies[rightIndex]
+
+			if rightBody.IsDead() {
+				continue
+			}
+
 			rightCollisionMask := rightBody.GetCollisionMask()
 
 			if leftBody.CanCollideWith(rightCollisionMask) {
@@ -34,7 +39,7 @@ func (world World) Update() {
 					})
 					rightBody.OnCollision(Collision{
 						Mask:    leftCollisionMask,
-						Another: rightBoundingBox,
+						Another: leftBoundingBox,
 						Data:    leftBody,
 					})
 
