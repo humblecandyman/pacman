@@ -1,6 +1,7 @@
 package pacman
 
 import (
+	"github.com/humblecandyman/pacman/animation"
 	"github.com/humblecandyman/pacman/controllers"
 	"github.com/humblecandyman/pacman/physics"
 	"github.com/humblecandyman/pacman/utils"
@@ -14,9 +15,15 @@ type Character struct {
 	movementVector utils.Vector
 
 	controller controllers.IController
+	animation  *animation.Animation
 
 	score  int
 	isDead bool
+}
+
+func (character *Character) updateComponents() {
+	character.controller.Update()
+	character.animation.Update()
 }
 
 func (character *Character) updatePosition() {
@@ -46,6 +53,7 @@ func (character *Character) setDirection(newDirection utils.Direction) {
 	}
 
 	character.direction = newDirection
+	character.animation.Resume()
 	character.updateMovementVector()
 }
 
@@ -92,4 +100,5 @@ func (character *Character) handleCollisionAgainstWall(wall physics.BoundingBox)
 	}
 
 	character.direction = utils.NoDirection
+	character.animation.Pause()
 }

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   sodipodi:docname="assets.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-nodes="true"
+     inkscape:zoom="1.4805976"
+     inkscape:cx="391.396"
+     inkscape:cy="158.71969"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#000000;stroke:#000000;stroke-width:0.264583;stroke-linejoin:bevel"
+       id="rect868"
+       width="274.84116"
+       height="163.68953"
+       x="-21.444044"
+       y="49.321297" />
+    <path
+       style="fill:#ffdd55;stroke:none;stroke-width:0.371272;stroke-linejoin:bevel"
+       id="circle1458"
+       sodipodi:type="arc"
+       sodipodi:cx="50.799999"
+       sodipodi:cy="16.933332"
+       sodipodi:rx="16.933332"
+       sodipodi:ry="16.933332"
+       sodipodi:start="0.32258629"
+       sodipodi:end="5.9642013"
+       sodipodi:arc-type="slice"
+       d="M 66.859888,22.301546 A 16.933332,16.933332 0 0 1 48.065545,33.644422 16.933332,16.933332 0 0 1 33.866694,16.902833 16.933332,16.933332 0 0 1 48.125761,0.21250123 16.933332,16.933332 0 0 1 66.879122,11.623006 l -16.079123,5.310326 z"
+       inkscape:export-filename="C:\Games\development\humble-games\pacman\assets\pacman.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#ffdd55;stroke:none;stroke-width:0.371272;stroke-linejoin:bevel"
+       id="path2039"
+       sodipodi:type="arc"
+       sodipodi:cx="84.666664"
+       sodipodi:cy="16.933332"
+       sodipodi:rx="16.933332"
+       sodipodi:ry="16.933332"
+       sodipodi:start="0.61235403"
+       sodipodi:end="5.6794851"
+       sodipodi:arc-type="slice"
+       d="M 98.523163,26.666533 A 16.933332,16.933332 0 0 1 79.527774,33.068064 16.933332,16.933332 0 0 1 67.73349,16.860064 16.933332,16.933332 0 0 1 79.667592,0.75473481 16.933332,16.933332 0 0 1 98.606872,7.3204064 L 84.666664,16.933332 Z"
+       inkscape:export-filename="C:\Games\development\humble-games\pacman\assets\pacman.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#ffdd55;stroke:none;stroke-width:0.371272;stroke-linejoin:bevel"
+       id="path2220"
+       sodipodi:type="arc"
+       sodipodi:cx="118.53333"
+       sodipodi:cy="16.933332"
+       sodipodi:rx="16.933332"
+       sodipodi:ry="16.933332"
+       sodipodi:start="0.86488306"
+       sodipodi:end="5.2623001"
+       sodipodi:arc-type="slice"
+       d="m 129.51848,29.819927 a 16.933332,16.933332 0 0 1 -22.64956,-0.61145 16.933332,16.933332 0 0 1 -1.76554,-22.5889213 16.933332,16.933332 0 0 1 22.27951,-4.123091 l -8.84956,14.4368673 z"
+       inkscape:export-filename="C:\Games\development\humble-games\pacman\assets\pacman.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#ffdd55;stroke:none;stroke-width:0.371272;stroke-linejoin:bevel"
+       id="path2663"
+       sodipodi:type="arc"
+       sodipodi:cx="152.39999"
+       sodipodi:cy="16.933332"
+       sodipodi:rx="16.933332"
+       sodipodi:ry="16.933332"
+       sodipodi:start="0.61235403"
+       sodipodi:end="5.6794851"
+       sodipodi:arc-type="slice"
+       d="m 166.25649,26.666533 a 16.933332,16.933332 0 0 1 -18.99539,6.401531 16.933332,16.933332 0 0 1 -11.79428,-16.208 16.933332,16.933332 0 0 1 11.9341,-16.10532919 16.933332,16.933332 0 0 1 18.93928,6.56567159 l -13.94021,9.6129256 z"
+       inkscape:export-filename="C:\Games\development\humble-games\pacman\assets\pacman.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#ffdd55;stroke:none;stroke-width:0.371272;stroke-linejoin:bevel"
+       id="path2665"
+       sodipodi:type="arc"
+       sodipodi:cx="186.26666"
+       sodipodi:cy="16.933332"
+       sodipodi:rx="16.933332"
+       sodipodi:ry="16.933332"
+       sodipodi:start="0.32258629"
+       sodipodi:end="5.9642013"
+       sodipodi:arc-type="slice"
+       d="M 202.32655,22.301546 A 16.933332,16.933332 0 0 1 183.53221,33.644422 16.933332,16.933332 0 0 1 169.33336,16.902833 16.933332,16.933332 0 0 1 183.59242,0.21250123 16.933332,16.933332 0 0 1 202.34579,11.623006 l -16.07913,5.310326 z"
+       inkscape:export-filename="C:\Games\development\humble-games\pacman\assets\pacman.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <circle
+       style="fill:#ffdd55;stroke:none;stroke-width:0.371272;stroke-linejoin:bevel"
+       id="circle2667"
+       cx="16.933332"
+       cy="16.933332"
+       r="16.933332"
+       inkscape:export-filename="C:\Games\development\humble-games\pacman\assets\pacman0.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:none;stroke:none;stroke-width:0.200322;stroke-linejoin:bevel"
+       id="rect2771"
+       width="203.2"
+       height="33.866665"
+       x="0"
+       y="0"
+       inkscape:export-filename="C:\Games\development\humble-games\pacman\assets\pacman.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <circle
+       style="fill:#ffdd55;stroke:none;stroke-width:0.371272;stroke-linejoin:bevel"
+       id="circle3069"
+       cx="16.933332"
+       cy="16.933332"
+       r="16.933332"
+       inkscape:export-filename="C:\Games\development\humble-games\pacman\assets\pacman0.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       id="g3107">
+      <path
+         style="fill:#ffdd55;stroke:none;stroke-width:0.371272;stroke-linejoin:bevel"
+         id="path3083"
+         sodipodi:type="arc"
+         sodipodi:cx="60.908817"
+         sodipodi:cy="94.2658"
+         sodipodi:rx="16.933332"
+         sodipodi:ry="16.933332"
+         sodipodi:start="0.32258629"
+         sodipodi:end="5.9642013"
+         sodipodi:arc-type="slice"
+         d="M 76.968706,99.634014 A 16.933332,16.933332 0 0 1 58.174363,110.97689 16.933332,16.933332 0 0 1 43.975512,94.235301 16.933332,16.933332 0 0 1 58.234579,77.544969 16.933332,16.933332 0 0 1 76.98794,88.955474 L 60.908817,94.2658 Z"
+         inkscape:export-filename="C:\Games\development\humble-games\pacman\assets\pacman.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <path
+         style="fill:#ffdd55;stroke:none;stroke-width:0.371272;stroke-linejoin:bevel"
+         id="path3085"
+         sodipodi:type="arc"
+         sodipodi:cx="94.775482"
+         sodipodi:cy="94.2658"
+         sodipodi:rx="16.933332"
+         sodipodi:ry="16.933332"
+         sodipodi:start="0.61235403"
+         sodipodi:end="5.6794851"
+         sodipodi:arc-type="slice"
+         d="M 108.63198,103.999 A 16.933332,16.933332 0 0 1 89.636592,110.40053 16.933332,16.933332 0 0 1 77.842308,94.192532 16.933332,16.933332 0 0 1 89.77641,78.087203 16.933332,16.933332 0 0 1 108.71569,84.652874 L 94.775482,94.2658 Z"
+         inkscape:export-filename="C:\Games\development\humble-games\pacman\assets\pacman.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <path
+         style="fill:#ffdd55;stroke:none;stroke-width:0.371272;stroke-linejoin:bevel"
+         id="path3087"
+         sodipodi:type="arc"
+         sodipodi:cx="128.64215"
+         sodipodi:cy="94.2658"
+         sodipodi:rx="16.933332"
+         sodipodi:ry="16.933332"
+         sodipodi:start="0.86488306"
+         sodipodi:end="5.2623001"
+         sodipodi:arc-type="slice"
+         d="m 139.6273,107.1524 a 16.933332,16.933332 0 0 1 -22.64956,-0.61146 16.933332,16.933332 0 0 1 -1.76555,-22.588916 16.933332,16.933332 0 0 1 22.27951,-4.123091 L 128.64215,94.2658 Z"
+         inkscape:export-filename="C:\Games\development\humble-games\pacman\assets\pacman.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <path
+         style="fill:#ffdd55;stroke:none;stroke-width:0.371272;stroke-linejoin:bevel"
+         id="path3089"
+         sodipodi:type="arc"
+         sodipodi:cx="162.50882"
+         sodipodi:cy="94.2658"
+         sodipodi:rx="16.933332"
+         sodipodi:ry="16.933332"
+         sodipodi:start="0.61235403"
+         sodipodi:end="5.6794851"
+         sodipodi:arc-type="slice"
+         d="m 176.36532,103.999 a 16.933332,16.933332 0 0 1 -18.99539,6.40153 16.933332,16.933332 0 0 1 -11.79428,-16.207998 16.933332,16.933332 0 0 1 11.9341,-16.105329 16.933332,16.933332 0 0 1 18.93928,6.565671 L 162.50882,94.2658 Z"
+         inkscape:export-filename="C:\Games\development\humble-games\pacman\assets\pacman.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <path
+         style="fill:#ffdd55;stroke:none;stroke-width:0.371272;stroke-linejoin:bevel"
+         id="path3091"
+         sodipodi:type="arc"
+         sodipodi:cx="196.37549"
+         sodipodi:cy="94.2658"
+         sodipodi:rx="16.933332"
+         sodipodi:ry="16.933332"
+         sodipodi:start="0.32258629"
+         sodipodi:end="5.9642013"
+         sodipodi:arc-type="slice"
+         d="M 212.43538,99.634014 A 16.933332,16.933332 0 0 1 193.64103,110.97689 16.933332,16.933332 0 0 1 179.44218,94.235301 16.933332,16.933332 0 0 1 193.70125,77.544969 16.933332,16.933332 0 0 1 212.45461,88.955474 L 196.37549,94.2658 Z"
+         inkscape:export-filename="C:\Games\development\humble-games\pacman\assets\pacman.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <circle
+         style="fill:#ffdd55;stroke:none;stroke-width:0.371272;stroke-linejoin:bevel"
+         id="circle3093"
+         cx="27.04215"
+         cy="94.2658"
+         r="16.933332"
+         inkscape:export-filename="C:\Games\development\humble-games\pacman\assets\pacman0.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <rect
+         style="fill:none;stroke:none;stroke-width:0.200322;stroke-linejoin:bevel"
+         id="rect3095"
+         width="203.2"
+         height="33.866665"
+         x="10.108819"
+         y="77.332466"
+         inkscape:export-filename="C:\Games\development\humble-games\pacman\assets\pacman.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <circle
+         style="fill:#ffdd55;stroke:none;stroke-width:0.371272;stroke-linejoin:bevel"
+         id="circle3097"
+         cx="27.04215"
+         cy="94.2658"
+         r="16.933332"
+         inkscape:export-filename="C:\Games\development\humble-games\pacman\assets\pacman0.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+    </g>
+    <circle
+       style="fill:#ffdd55;stroke:none;stroke-width:0.371272;stroke-linejoin:bevel"
+       id="circle3109"
+       cx="16.933332"
+       cy="16.933332"
+       r="16.933332"
+       inkscape:export-filename="C:\Games\development\humble-games\pacman\assets\pacman0.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <circle
+       style="fill:#ffdd55;stroke:none;stroke-width:0.371272;stroke-linejoin:bevel"
+       id="circle3215"
+       cx="16.933332"
+       cy="16.933332"
+       r="16.933332"
+       inkscape:export-filename="C:\Games\development\humble-games\pacman\assets\pacman0.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>

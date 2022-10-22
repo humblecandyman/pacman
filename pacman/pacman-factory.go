@@ -2,6 +2,7 @@ package pacman
 
 import (
 	"github.com/hajimehoshi/ebiten/v2"
+	"github.com/humblecandyman/pacman/animation"
 	"github.com/humblecandyman/pacman/controllers"
 	"github.com/humblecandyman/pacman/utils"
 )
@@ -22,6 +23,16 @@ func (factory PacmanFactory) Create() *Pacman {
 				X: factory.Radius * 2.0,
 				Y: factory.Radius * 2.0,
 			},
+
+			animation: animation.AnimationFactory{
+				SpriteSheetFileName: "assets/pacman.png",
+				FrameTime:           0.04,
+
+				FrameSize: utils.Vector{
+					X: 128,
+					Y: 128,
+				},
+			}.Create(),
 		},
 		radius: factory.Radius,
 	}

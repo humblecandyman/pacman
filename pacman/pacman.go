@@ -14,12 +14,16 @@ type Pacman struct {
 
 	radius      float64
 	eyePosition utils.Vector
+
+	rotation     float64
+	prevRotation float64
 }
 
 func (pacman *Pacman) Update() {
-	pacman.controller.Update()
+	pacman.updateComponents()
+
 	pacman.updatePosition()
-	pacman.updateEyePosition()
+	pacman.updateRotation()
 }
 
 func (pacman Pacman) Draw(target *ebiten.Image) {
@@ -27,8 +31,34 @@ func (pacman Pacman) Draw(target *ebiten.Image) {
 		return
 	}
 
-	pacman.drawBody(target)
-	pacman.drawEye(target)
+	pacman.drawSprite(target)
+}
+
+func (pacman Pacman) drawSprite(target *ebiten.Image) {
+	render.Sprite{
+		Texture:  pacman.animation.GetFrame(),
+		Position: pacman.position,
+		Size:     pacman.size,
+		Rotation: pacman.rotation,
+	}.Draw(target)
+}
+
+func (pacman *Pacman) updateRotation() {
+	rotation := pacman.prevRotation
+
+	switch pacman.direction {
+	case utils.DirectionUp:
+		rotation = -1.5708
+	case utils.DirectionRight:
+		rotation = 0
+	case utils.DirectionDown:
+		rotation = 1.5708
+	case utils.DirectionLeft:
+		rotation = 3.1416
+	}
+
+	pacman.rotation = rotation
+	pacman.prevRotation = rotation
 }
 
 func (pacman Pacman) drawBody(target *ebiten.Image) {
